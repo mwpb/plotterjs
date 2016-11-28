@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="http://cdn.jsdelivr.net/g/filesaver.js"></script> 
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="jsxgraph.css" />
+<script type="text/javascript" src="jsxgraphcore.js"></script>
+<script type="text/javascript" src="numeric.js"></script>
+</head>
+<body>
+<div style="float:left">
+    <div  id="box" class="jxgbox" style="width:400px; height:400px;"></div>
+</div>
+<div style="float:left">
+    <div  id="caption" class="jxgbox" style="width:400px; height:400px;"></div>
+</div>
+<script type="text/javascript" src="grapher.js"></script>
+</body>
+</html>
