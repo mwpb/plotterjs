@@ -4,18 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script> 
-<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 <link rel="stylesheet" type="text/css" href="jsxgraph.css" />
 <script type="text/javascript" src="jsxgraphcore.js"></script>
 <script type="text/javascript" src="numeric.js"></script>
 </head>
 <body>
-<div style="float:left">
-    <div  id="box" class="jxgbox" style="width:400px; height:400px;"></div>
-</div>
-<div style="float:left">
-    <div  id="caption" class="jxgbox" style="width:200px; height:400px;"></div>
-</div>
-<script type="text/javascript" src="grapher.js"></script>
+    <h1>Grapher</h1>
+    <dl>
+	<dt>Function</dt><dd><input type="text" id="input" value="sin(x)*x"></dd>
+	<dt>xmin</dt><dd><input type="text" id="xmin" value="-10"></dd>
+	<dt>xmax</dt><dd><input type="text" id="xmax" value="10"></dd>
+	<dt>ymin</dt><dd><input type="text" id="ymin" value="-10"></dd>
+	<dt>ymax</dt><dd><input type="text" id="ymax" value="10"></dd>
+	<input type="button" value="plot" onClick="grapher()">
+    </dl>
+    <div style="float:left">
+	<div  id="box" class="jxgbox" style="width:400px; height:400px;"></div>
+    </div>
+    <div style="float:left">
+	<div  id="caption" class="jxgbox" style="width:200px; height:400px;"></div>
+    </div>
+    <script type="text/javascript" src="grapher.js"></script>
 </body>
 </html>
