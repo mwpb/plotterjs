@@ -36,10 +36,27 @@ function grapher() {
 	return xmin.Value()+(R.Value())*(xmax.Value()-xmin.Value());
     }
 
-    var int = b.create('integral',[[lower,upper],func],{withLabel:false});
-    b.create('point',[lower,0],{name:"a",});
-    b.create('point',[upper,0],{name:"b"});
+    var integral = b.create('integral',[[lower,upper],func],{withLabel:false});
+    var a = b.create('point',[lower,0],{name:"a",});
+    var b = b.create('point',[upper,0],{name:"b"});
+    var toggleIntegralButton = c.create('button',[30,85,"Toggle Integral",toggleIntegral]);
+    var integralIsVisible = true
 
+    function toggleIntegral(){
+	if (integralIsVisible == true){
+	    integralIsVisible = false
+	    integral.setAttribute({visible:false})
+	    a.setAttribute({visible:false})
+	    b.setAttribute({visible:false})
+	}
+	else{
+	    integralIsVisible = true
+	    integral.setAttribute({visible:true})
+	    a.setAttribute({visible:true})
+	    b.setAttribute({visible:true})
+	}
+    }
+    
     function export2SVG(){
 	var svg = new XMLSerializer().serializeToString(b.renderer.svgRoot);
 	var blob = new Blob([svg], {type: "text/plain;charset=utf-8"});
