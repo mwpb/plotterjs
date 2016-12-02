@@ -28,6 +28,11 @@
 	<tr>
 	    <td><input type="button" value="Plot" onClick="drawGraph(b,c)"></td><td></td>
 	</tr>
+	    <td><input type="button" value="Add Integral" onClick="addIntegral()"></td><td></td>
+	</tr>
+	<tr>
+	    <td><input type="button" value="Add Differential" onClick="addDifferential()"></td><td></td>
+	</tr>
     </table>
     <div style="float:left">
 	<div  id="box" class="jxgbox" style="width:400px; height:400px;"></div>
@@ -36,8 +41,6 @@
 	<div  id="caption" class="jxgbox" style="width:200px; height:400px;"></div>
     </div>
     <script type="text/javascript" src="grapher.js"></script>
-    <script>
-     drawGraph(b,c);
-    </script>
+    <input type="button" value="Export to SVG" onClick="export2SVG()">
 </body>
 </html>
