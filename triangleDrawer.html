@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+	<script>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]},imageFont: null});</script>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="jsxgraph.css" />
+	<script type="text/javascript" src="jsxgraphcore.js"></script>
+	<script src="https://cdn.jsdelivr.net/g/filesaver.js"></script> 
+	<script type="text/javascript" src="numeric.js"></script>
+    </head>
+    <body>
+    <div id="main" style="float:left;width:50%;">
+    <div id="content" style="height: 75%">
+    	<h3>Triangle Drawer</h3>
+        	<div id="main0">
+			Enter triangle data:
+			<ul>
+				<li><button onclick="toggleElement(a)">Toggle angle a</button></li>
+				<li><button onclick="toggleElement(b)">Toggle angle b</button></li>
+				<li><button onclick="toggleElement(c)">Toggle angle c</button></li>
+			</ul>
+			</div>
+        </div>
+    </div>
+	<div style="float:left;width:50%">
+		<div id="buttons" style="height: 75px">
+	   		<button style="width:49%;height: 90%" onclick="resize();">Resize</button>
+			<button style="width: 49%; height: 90%; visibility: visible;" onClick="export2SVG();" >Export to SVG</button>
+        </div>
+	    <div  id="box" class="jxgbox" style="width:100%; height:400px;"></div>
+	</div>
+   	<script type="text/javascript" src="triangleDrawer.js"></script>
+    </body>
+</html>
