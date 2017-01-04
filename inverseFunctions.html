@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+	<script>MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]},imageFont: null});</script> -->
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="jsxgraph.css" />
+	<script type="text/javascript" src="jsxgraphcore.js"></script>
+	<script src="https://cdn.jsdelivr.net/g/filesaver.js"></script> 
+	<script type="text/javascript" src="numeric.js"></script>
+    </head>
+    <body>
+    <div id="main" style="float:left;width:50%;">
+    <div id="content" style="height: 75%">
+    	<h3>Inverse Functions</h3>
+        	<div id="main0">
+			Enter function description:
+			<p>
+				<input id="func" type="text" name="func"><button onclick="redrawFunc()">Plot</button></li>
+			</p>
+			Enter range of inverse function:
+			<p>
+				<input id="invMin" type="numeric" name="invMin"><input id="invMax" type="numeric" name="invMax"><button onclick="updateRangeInv()">Update Range of Inverse</button>
+			</p>
+			Enter axes details:
+			<table style="width: 100px">
+				<tr>
+					<td></td>
+					<td><input style="width: 50px" type="text" name="ymax" id="ymax"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input style="width: 50px" type="text" name="xmin" id="xmin"></td>
+					<td></td>
+					<td><input style="width: 50px" type="text" name="xmax" id="xmax"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input style="width: 50px" type="text" name="ymin" id="ymin"></td>
+				</tr>
+			</table>
+			<p>
+				<button onclick="redrawAxes()">Redraw Axes</button>
+			</p>
+			Enter value of inverse:
+			<p>
+				<input type="text" name="output" id="output">
+				<button onclick="plotInverses()">Plot Inverses</button>
+				<button onclick="toggleInverses()">Toggle Inverses</button>
+			</p>
+			</div>
+        </div>
+    </div>
+	<div style="float:left;width:50%">
+		<div id="buttons" style="height: 75px">
+			<button style="width: 100%; height: 90%; visibility: visible;" onClick="export2SVG();" >Export to SVG</button>
+        </div>
+	    <div  id="box" class="jxgbox" style="width:100%; height:400px;"></div>
+	</div>
+   	<script type="text/javascript" src="inverseFunctions.js"></script>
+    </body>
+</html>
