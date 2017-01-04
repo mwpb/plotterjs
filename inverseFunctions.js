@@ -19,7 +19,7 @@ var outPoint1 = b.create('point',[0,0.5],{visible:false});
 var outPoint2 = b.create('point',[1,0.5],{visible:false});
 var output = b.create('line',[outPoint1,outPoint2],{visible:false});
 
-var intersection = b.create('intersection',[output,yaxis,0],{withLabel:false,color:"#00ff00"});
+var intersection = b.create('intersection',[output,yaxis,0],{visible:false,withLabel:false,color:"#00ff00"});
 
 var i0 = b.create('intersection',[output,func,0],{withLabel:false});
 var i1 = b.create('intersection',[output,func,1],{withLabel:false});
