@@ -19,7 +19,7 @@ var outPoint1 = b.create('point',[0,0.5],{visible:false});
 var outPoint2 = b.create('point',[1,0.5],{visible:false});
 var output = b.create('line',[outPoint1,outPoint2],{visible:false});
 
-var intersection = b.create('intersection',[output,yaxis,0],{visible:false,withLabel:false,color:"#00ff00"});
+// var intersection = b.create('intersection',[output,yaxis,0],{visible:false,withLabel:false,color:"#00ff00"});
 
 var i0 = b.create('intersection',[output,func,0],{withLabel:false});
 var i1 = b.create('intersection',[output,func,1],{withLabel:false});
@@ -73,8 +73,8 @@ function plotInverses(){
 }
 
 function toggleInverses(){
-	var ints = [intersection,i0,i1,i2,i3,i4,i5,i6,i7,i8,i9];
-	if (intersection.getAttribute('visible')===true) {
+	var ints = [i0,i1,i2,i3,i4,i5,i6,i7,i8,i9];
+	if (i0.getAttribute('visible')===true) {
 		for (var i=0;i<ints.length;i++){
 			ints[i].setAttribute({visible:false});
 		}

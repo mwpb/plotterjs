@@ -16,11 +16,19 @@
     <div id="content" style="height: 75%">
     	<h3>Triangle Drawer</h3>
         	<div id="main0">
-			Enter triangle data:
+			Customise Labels and Angles:
 			<ul>
+				<li><button onclick="togglePQR(a)">Toggle pqr</button></li>
 				<li><button onclick="toggleElement(a)">Toggle angle a</button></li>
-				<li><button onclick="toggleElement(angb)">Toggle angle b</button></li>
+				<li><button onclick="toggleElement(b)">Toggle angle b</button></li>
 				<li><button onclick="toggleElement(c)">Toggle angle c</button></li>
+				<li><input value="A" type="text" id="A"><button onclick="updateLabel(A)">Update Label A: </button></li>
+				<li><input type="text" value="B" id="B"><button onclick="updateLabel(B)">Update Label B: </button></li>
+				<li><input value="C" type="text" id="C"><button onclick="updateLabel(C)">Update Label C: </button></li>
+				<li><input value="a" type="text" id="a"><button onclick="updateLabel(a)">Update Label a: </button></li>
+				<li><input type="text" value="b" id="b"><button onclick="updateLabel(b)">Update Label b: </button></li>
+				<li><input value="c" type="text" id="c"><button onclick="updateLabel(c)">Update Label c: </button></li>
+				<li><button onclick="updateAll()">Update All Labels</button></li>
 			</ul>
 			</div>
         </div>
